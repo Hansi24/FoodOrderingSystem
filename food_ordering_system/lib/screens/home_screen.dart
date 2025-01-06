@@ -1,6 +1,7 @@
 // lib/screens/home_screen.dart
 import 'package:cw2/screens/burger_category.dart';
 import 'package:cw2/screens/burger_details.dart';
+import 'package:cw2/screens/DrinkScreen.dart';
 import 'package:cw2/screens/item.dart';
 import 'package:cw2/screens/pizza_category.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                 text: 'Get Started',
                 onPressed: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const PizzaScreen()),
+                  MaterialPageRoute(builder: (context) => const DrinkScreen()),
                 ),
               ),
             ],
