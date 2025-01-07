@@ -1,47 +1,47 @@
 import 'package:flutter/material.dart';
 
-class PizzaCategoriesScreen extends StatelessWidget {
-  const PizzaCategoriesScreen({super.key});
+class BurgerCategoriesScreen extends StatelessWidget {
+  const BurgerCategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, dynamic>> pizzas = [
+    final List<Map<String, dynamic>> burgers = [
       {
-        "name": "Margherita",
-        "image": "assets/peparooni.jpg",
+        "name": "Classic Burger",
+        "image": "assets/category_burger.jpg",
+        "price": "\$8.99",
+      },
+      {
+        "name": "Cheese Burger",
+        "image": "assets/category_burger.jpg",
         "price": "\$9.99",
       },
       {
-        "name": "Pepperoni",
-        "image": "assets/peparooni.jpg",
-        "price": "\$12.99",
+        "name": "Bacon Burger",
+        "image": "assets/category_burger.jpg",
+        "price": "\$10.99",
       },
       {
-        "name": "BBQ Chicken",
-        "image": "assets/peparooni.jpg",
-        "price": "\$14.99",
+        "name": "Veggie Burger",
+        "image": "assets/category_burger.jpg",
+        "price": "\$7.99",
       },
       {
-        "name": "Veggie Supreme",
-        "image": "assets/peparooni.jpg",
-        "price": "\$11.99",
+        "name": "Chicken Burger",
+        "image": "assets/category_burger.jpg",
+        "price": "\$9.49",
       },
       {
-        "name": "Hawaiian",
-        "image": "assets/peparooni.jpg",
-        "price": "\$13.99",
-      },
-      {
-        "name": "Meat Lovers",
-        "image": "assets/peparooni.jpg",
-        "price": "\$15.99",
+        "name": "Spicy Burger",
+        "image": "assets/category_burger.jpg",
+        "price": "\$10.49",
       },
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pizza Categories'),
-        backgroundColor: Colors.deepOrange,
+        title: const Text('Burger Categories'),
+        backgroundColor: Colors.brown,
         centerTitle: true,
       ),
       body: Container(
@@ -60,9 +60,9 @@ class PizzaCategoriesScreen extends StatelessWidget {
             crossAxisSpacing: 15,
             childAspectRatio: 0.7,
           ),
-          itemCount: pizzas.length,
+          itemCount: burgers.length,
           itemBuilder: (context, index) {
-            final pizza = pizzas[index];
+            final burger = burgers[index];
 
             return Card(
               shape: RoundedRectangleBorder(
@@ -72,36 +72,37 @@ class PizzaCategoriesScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Pizza Image
+                  // Burger Image
                   ClipRRect(
                     borderRadius: const BorderRadius.vertical(
                       top: Radius.circular(15),
                     ),
                     child: Image.asset(
-                      pizza['image'],
-                      height: 200, // Adjusted height
+                      burger['image'],
+                      height: 200, // Adjusted height for larger images
                       width: double.infinity,
-                      fit: BoxFit.contain, // Ensures the full pizza image is visible
+                      fit: BoxFit.contain, // Ensures full image is displayed
                     ),
                   ),
                   const SizedBox(height: 10),
 
-                  // Pizza Name
+                  // Burger Name
                   Text(
-                    pizza['name'],
+                    burger['name'],
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 5),
 
-                  // Pizza Price
+                  // Burger Price
                   Text(
-                    pizza['price'],
+                    burger['price'],
                     style: const TextStyle(
                       fontSize: 16,
-                      color: Colors.deepOrange,
+                      color: Colors.brown,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

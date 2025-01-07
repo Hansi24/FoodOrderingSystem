@@ -1,41 +1,41 @@
 import 'package:flutter/material.dart';
 
-class BurgerCategoriesScreen extends StatelessWidget {
-  const BurgerCategoriesScreen({super.key});
+class BeverageCategoriesScreen extends StatelessWidget {
+  const BeverageCategoriesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> burgers = [
-      {
-        "name": "Classic Burger",
-        "image": "assets/burger.jpg",
-        "price": "\$8.99",
-      },
-      {
-        "name": "Cheese Burger",
-        "image": "assets/burger.jpg",
-        "price": "\$9.99",
-      },
-      {
-        "name": "Bacon Burger",
-        "image": "assets/burger.jpg",
-        "price": "\$10.99",
-      },
-      {
-        "name": "Veggie Burger",
-        "image": "assets/burger.jpg",
-        "price": "\$7.99",
-      },
-      {
-        "name": "Chicken Burger",
-        "image": "assets/burger.jpg",
-        "price": "\$9.49",
-      },
-      {
-        "name": "Spicy Burger",
-        "image": "assets/burger.jpg",
-        "price": "\$10.49",
-      },
+     {
+    "name": "Classic Cola",
+    "image": "assets/category_beverages.jpg",
+    "price": "\$1.99"
+  },
+  {
+    "name": "Fresh Lemonade",
+    "image": "assets/category_beverages.jpg",
+    "price": "\$2.49"
+  },
+  {
+    "name": "Iced Tea",
+    "image": "assets/category_beverages.jpg",
+    "price": "\$2.99"
+  },
+  {
+    "name": "Espresso",
+    "image": "assets/category_beverages.jpg",
+    "price": "\$3.49"
+  },
+  {
+    "name": "Milkshake",
+    "image": "assets/category_beverages.jpg",
+    "price": "\$4.49"
+  },
+  {
+    "name": "Smoothie",
+    "image": "assets/category_beverages.jpg",
+    "price": "\$5.49"
+  }
     ];
 
     return Scaffold(
